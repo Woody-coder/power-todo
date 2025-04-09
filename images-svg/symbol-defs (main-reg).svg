@@ -1,0 +1,9 @@
+<svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+<symbol id="icon-Component-4" viewBox="0 0 29 32">
+<path fill="#fff" style="fill: var(--color1, #fff); stroke: var(--color2, #f2f2f2)" stroke="#f2f2f2" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="0.64" d="M26.56 12.48c0 6.716-5.444 12.16-12.16 12.16s-12.16-5.444-12.16-12.16c0-6.716 5.444-12.16 12.16-12.16s12.16 5.444 12.16 12.16z"></path>
+<path fill="#f2f2f2" style="fill: var(--color2, #f2f2f2); stroke: var(--color2, #f2f2f2)" stroke="#f2f2f2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="0.96" d="M17.92 10.88c0 1.767-1.433 3.2-3.2 3.2s-3.2-1.433-3.2-3.2c0-1.767 1.433-3.2 3.2-3.2s3.2 1.433 3.2 3.2z"></path>
+<path fill="#f2f2f2" style="fill: var(--color2, #f2f2f2); stroke: var(--color2, #f2f2f2)" stroke="#f2f2f2" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="0.96" d="M22.72 20.48c0 1.28-4.613 3.627-8 3.627s-8.32-2.027-8.32-3.627c0-2.371 4.933-4.96 8.32-4.96s8 2.589 8 4.96z"></path>
+</symbol>
+</defs>
+</svg>
