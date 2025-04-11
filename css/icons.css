@@ -1,0 +1,18 @@
+.icon-registration {
+  width: 39px;
+  height: 39px;
+}
+
+.icon-main {
+  width: 22px;
+  height: 21px;
+}
+
+.icon-bottom {
+  border-radius: 3px;
+  fill: #fff;
+  border: 0px solid #a19d9d;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.04);
+  height: 24px;
+  width: 24px;
+}
