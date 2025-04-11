@@ -1,0 +1,36 @@
+@import url('reset.css');
+@import url('header.css');
+@import url('control-buttons.css');
+@import url('table.css');
+@import url('footer.css');
+@import url('icons.css');
+
+:root {
+  --font-family: 'Inter', sans-serif;
+  --second-family: 'Itim', sans-serif;
+}
+
+body {
+  font-family: var(--font-family);
+  line-height: 1.2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-main {
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 24px;
+  border-radius: 15px;
+  width: 1128px;
+  height: 644px;
+  box-shadow: 0 2px 6px 4px rgba(0, 0, 0, 0.04);
+  background: #fff;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0 96px 0 96px;
+  margin: 40px auto 0;
+}
+

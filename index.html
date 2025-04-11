@@ -1,15 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>TO-DO list</title>
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize/modern-normalize.css">
-	<link rel="stylesheet" href="./css/styles.css">
-</head>
-<body>
-	
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TO-DO list</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/modern-normalize/modern-normalize.css"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <div class="container-main">
+      <header class="container">
+        <div>
+          <h1>Welcome Back Your Name!</h1>
+          <p class="title-description">
+            Here's the list of your tasks for this month!
+          </p>
+        </div>
+        <svg class="icon-registration">
+          <use href="./images-svg/symbol-defs (main-reg).svg#icon-Component-4"></use>
+        </svg>
+      </header>
 
-<script type="module" src="./main.js"></script>
-</body>
+      <section class="container section">
+        <div class="buttons">
+          <input class="filter" type="text" placeholder="Filter Tasks..." />
+          <button class="b-new-task">
+            <svg class="icon-main">
+              <use href="./images-svg/symbol-defs.svg#icon-Circle-Add"></use>
+            </svg>
+            Add New Task
+          </button>
+          <button class="b-check b-status">
+            <svg class="icon-main">
+              <use href="./images-svg/symbol-defs.svg#icon-Circle-Add"></use>
+            </svg>
+            Status
+          </button>
+          <button class="b-check">
+            <svg class="icon-main">
+              <use href="./images-svg/symbol-defs.svg#icon-Circle-Add"></use>
+            </svg>
+            Priority
+          </button>
+        </div>
+        <div>
+          <button class="b-view">
+            <svg class="icon-main">
+              <use href="./images-svg/symbol-defs.svg#icon-Sort-by"></use>
+            </svg>
+            View
+          </button>
+        </div>
+      </section>
+
+      <main class="tasks-list">
+        <div class="tasks container">
+          <ul class="test"></ul>
+        </div>
+      </main>
+
+      <footer>
+        <p class="pages">0 of 100 row(s) selected</p>
+        <div class="footer-main">
+          <div class="select">
+            <p class="row-per-pages">Rows per page</p>
+            <select>
+              <option value="10">10</option>
+            </select>
+          </div>
+          <p class="page-info">Page 1 of 5</p>
+          <div class="svgs">
+            <div class="svg-bottom-left">
+              <svg class="icon-bottom">
+                <use href="./images-svg/symbol-defs.svg#icon-Double_Left"></use>
+              </svg>
+              <svg class="icon-bottom">
+                <use
+                  href="./images-svg/symbol-defs.svg#icon-Double_right1"
+                ></use>
+              </svg>
+            </div>
+            <div class="svg-bottom-right">
+              <svg class="icon-bottom">
+                <use
+                  href="./images-svg/symbol-defs.svg#icon-Arrow_Left_5"
+                ></use>
+              </svg>
+              <svg class="icon-bottom">
+                <use
+                  href="./images-svg/symbol-defs.svg#icon-Double_right"
+                ></use>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="module" src="./main.js"></script>
+  </body>
 </html>
