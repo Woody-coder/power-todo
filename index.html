@@ -20,7 +20,9 @@
           </p>
         </div>
         <svg class="icon-registration">
-          <use href="./images-svg/symbol-defs (main-reg).svg#icon-Component-4"></use>
+          <use
+            href="./images-svg/symbol-defs (main-reg).svg#icon-Component-4"
+          ></use>
         </svg>
       </header>
 
@@ -57,9 +59,68 @@
       </section>
 
       <main class="tasks-list">
-        <div class="tasks container">
-          <ul class="test"></ul>
+
+        <div class="table-header">
+          <div class="left-container-table-header">
+            <div class="all-checkbox">
+              <input type="checkbox" />
+              <p class="all-tasks">All Tasks</p>
+            </div>
+            <button class="b-sort">
+              Title
+              <svg class="icon-sort">
+                <use href="./images-svg/symbol-defs.svg#icon-Component-1"></use>
+              </svg>
+            </button>
+          </div>
+
+          <div class="right-container-table-header">
+            <button class="b-sort">
+              Status
+              <svg class="icon-sort">
+                <use href="./images-svg/symbol-defs.svg#icon-Component-1"></use>
+              </svg>
+            </button>
+            <button class="b-sort">
+              Priority
+              <svg class="icon-sort">
+                <use href="./images-svg/symbol-defs.svg#icon-Component-1"></use>
+              </svg>
+            </button>
+          </div>
         </div>
+        <!-- <div> 
+
+          <div class="task-1-for-styles">
+            <div class="left-container-table">
+              <div class="all-checkbox">
+                <input type="checkbox" />
+                <p class="all-tasks">Task-1</p>
+              </div>
+              <div class="text-conteiner-table">
+                <button class="b-tag">Feature</button>
+                <p class="to-do-text">texttexttext</p>
+              </div>
+            </div>
+
+            <div class="right-container-table">
+              <button class="status-to-do">
+                <img src="./images-svg/Clock.svg" alt="clock" />
+                In Progress
+              </button>
+              <button class="importance">
+                <svg class="icon-sort">
+                  <use href="./images-svg/symbol-defs.svg#icon-Arrow_Top"></use>
+                </svg>
+                High
+              </button>
+              <svg class="icon-sort">
+                <use href="./images-svg/symbol-defs.svg#icon-More"></use>
+              </svg>
+            </div>
+          </div>
+
+        </div> -->
       </main>
 
       <footer>
@@ -100,6 +161,27 @@
       </footer>
     </div>
 
-    <script type="module" src="./main.js"></script>
+	<div class="overlay"></div>
+	<div class="modal">
+		<div class="inputs-modal-date">
+			<div>
+				<p class="text-info-date">Creation date</p>
+				<input class="creation-date" type="date">
+			</div>
+			<div>
+				<p class="text-info-date">Expiration date</p>
+				<input class="expiration-date" type="date">
+			</div>
+		</div>
+		 <textarea class="modal-textarea" placeholder="Add a Note..."></textarea>
+		<div class="modals-buttons">
+			<button class="b-modals b-save">Save</button>
+			<button class="b-modals b-cancel">Cancel</button>
+		</div>
+	</div>
+
+
+
+    <script type="module" src="./js/main.js"></script>
   </body>
 </html>

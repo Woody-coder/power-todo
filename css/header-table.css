@@ -1,0 +1,41 @@
+.table-header {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 8px;
+	padding: 0 107px 5px 17px;
+	border-bottom: 1px solid #f2f2f2;
+}
+
+.left-container-table-header {
+	display: flex;
+	gap: 65px;
+}
+
+.right-container-table-header {
+	display: flex;
+	gap: 99px;
+}
+
+.b-sort {
+  font-weight: 400;
+  font-size: 12px;
+  color: #7a7a7a;
+  display: flex;
+  align-items: center;
+}
+
+.all-tasks {
+	width: 44px;
+  font-weight: 400;
+  font-size: 12px;
+  color: #7a7a7a;
+  margin-top: 1.4px;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.all-checkbox {
+	display: flex;
+	align-items: center;
+	gap: 4px;
+}
