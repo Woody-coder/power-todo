@@ -69,10 +69,6 @@
 <path fill="none" stroke="#7a7a7a" style="stroke: var(--color3, #7a7a7a)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="1.2308" d="M15.692 13.734l-4.615-4.429-4.615 4.429"></path>
 <path fill="none" stroke="#7a7a7a" style="stroke: var(--color3, #7a7a7a)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="1.2308" d="M15.692 18.489l-4.615 4.429-4.615-4.429"></path>
 </symbol>
-<symbol id="icon-Component-3" viewBox="0 0 32 32">
-<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="1.3333" d="M16 25.334c4.45 0 8.281-3.141 9.153-7.504s-1.458-8.736-5.566-10.446-8.852-0.282-11.334 3.412c-2.482 3.694-2.011 8.625 1.125 11.782 1.752 1.764 4.135 2.756 6.621 2.756z"></path>
-<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="1.3333" d="M14.547 13.552v4.549h4.356"></path>
-</symbol>
 </defs>
 </svg>
 
