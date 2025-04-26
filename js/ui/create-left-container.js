@@ -6,7 +6,8 @@ export function createLeftContainerTable(taskName, toDoText, buttonText = 'none'
   checkBoxContainer.classList.add('all-checkbox');
 
   const inputCheckBox = document.createElement('input');
-  inputCheckBox.setAttribute('type', 'checkbox');
+	inputCheckBox.setAttribute('type', 'checkbox');
+	inputCheckBox.classList.add('task-checkbox');
 
   const taskNameElement = document.createElement('p');
   taskNameElement.classList.add('all-tasks');

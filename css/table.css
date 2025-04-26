@@ -11,8 +11,7 @@
 .task-1-for-styles {
   display: flex;
   justify-content: space-between;
-  margin-top: 8px;
-  padding: 0 21px 5px 17px;
+  padding: 6.4px 21px 6.4px 17px;
   border-bottom: 1px solid #f2f2f2;
 }
 
@@ -24,7 +23,8 @@
 
 .right-container-table {
   display: flex;
-gap: 62px;
+  align-items: center;
+  gap: 62px;
 }
 
 .text-conteiner-table {
@@ -46,7 +46,7 @@ gap: 62px;
 }
 
 .to-do-text {
-	max-width: 300px;
+  max-width: 300px;
   font-weight: 500;
   font-size: 10px;
   color: #434343;
@@ -70,4 +70,17 @@ gap: 62px;
   font-weight: 400;
   font-size: 12px;
   color: #434343;
+}
+
+.task-accomplished-text {
+  text-decoration: line-through;
+}
+
+.task-accomplished-background-color {
+  background-color: #aaa;
+}
+
+.task-accomplished-b-tag {
+	background-color: #aaa;
+	border-color: #aaa;
 }
