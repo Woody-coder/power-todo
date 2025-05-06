@@ -1,4 +1,4 @@
-import { tasks } from '../core/tasks.js';
+import { tasks } from '../main.js';
 import { getDatesCreationAndCustomExpiration } from '../core/functions.js';
 import { renderTasksToPage } from '../core/custom-events.js';
 import { setItemToLocalStorage } from '../core/helpers.js';
@@ -21,13 +21,15 @@ input.addEventListener('keypress', (event) => {
 });
 
 function createNewTaskForInput(inputText) {
-  const { dataCreation, dataExpiration } =
-    getDatesCreationAndCustomExpiration();
+  const { dataCreation, dataExpiration } = getDatesCreationAndCustomExpiration();
   const trimText = inputText.trim();
+  const taskId = Date.now();
 
   if (trimText === '') return;
 
   const newTaskInputObject = {
+    id: taskId,
+    isCompleted: false,
     numTask: `Task-${tasks.length + 1}`,
     toDoText: trimText,
     status: 'In Progress',

@@ -21,8 +21,10 @@ export function createLeftContainerTable(taskName, toDoText, buttonText = 'none'
   buttonTag.textContent = buttonText;
 
   const toDoTextElement = document.createElement('p');
-  toDoTextElement.classList.add('to-do-text');
-	toDoTextElement.textContent = toDoText.length > 60 ? toDoText.slice(0, 60) + '...' : toDoText;
+	toDoTextElement.classList.add('to-do-text');
+	 if (toDoText) {
+     toDoTextElement.textContent = toDoText.length > 50 ? toDoText.slice(0, 50) + '...' : toDoText;
+	};
 
   taskLeftTableContainer.append(checkBoxContainer);
   taskLeftTableContainer.append(textContainer);

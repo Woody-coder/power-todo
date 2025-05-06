@@ -24,13 +24,19 @@
 .right-container-table {
   display: flex;
   align-items: center;
-  gap: 62px;
+  gap: 56px;
 }
 
 .text-conteiner-table {
   display: flex;
   align-items: center;
   gap: 4px;
+}
+
+.container-pencil-button {
+	display: flex;
+	align-items: center;
+	gap: 8px;
 }
 
 .b-tag {
@@ -74,13 +80,59 @@
 
 .task-accomplished-text {
   text-decoration: line-through;
+  transition: all 0.3s ease;
 }
 
 .task-accomplished-background-color {
   background-color: #aaa;
+  transition: all 0.3s ease;
 }
 
 .task-accomplished-b-tag {
 	background-color: #aaa;
 	border-color: #aaa;
+	transition: all 0.3s ease;
+}
+
+.b-delete {
+	font-size: 20px;
+	width: 24px;
+	height: 20px;
+	color: black;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all 0.3s ease;
+}
+
+.b-delete:hover {
+	background-color: #fd4637;
+	color: white;
+	border: none;
+} 
+
+input {
+	accent-color: white;
+}
+
+@keyframes fadeOut {
+	0% {
+		opacity: 1;
+		transform: scale(1);
+	}
+	100% {
+		opacity: 0;
+		transform: scale(0.95);
+	}
+}
+
+.fade-out {
+	animation: fadeOut 0.3s forwards;
+}
+
+
+.task-fade-out {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.5s ease;
 }
