@@ -1,4 +1,4 @@
-import { tasks } from '../core/tasks.js';
+import { tasks } from '../main.js';
 import { getDatesCreationAndCustomExpiration } from '../core/functions.js';
 import { renderTasksToPage } from '../core/custom-events.js';
 import { setItemToLocalStorage } from '../core/helpers.js';
@@ -15,12 +15,8 @@ const textArea = document.querySelector('.modal-textarea');
 const openModalWindow = () => {
   modal.classList.add('show');
   overlay.style.display = 'block';
-  const { dataCreation, dataExpiration } =
-    getDatesCreationAndCustomExpiration();
-  [modalCreationDate.value, modalExpirationDate.value] = [
-    dataCreation,
-    dataExpiration,
-  ];
+  const { dataCreation, dataExpiration } = getDatesCreationAndCustomExpiration();
+  [modalCreationDate.value, modalExpirationDate.value] = [dataCreation, dataExpiration];
 };
 
 const removeInfo = () => {
@@ -33,10 +29,13 @@ const savingDataUsingTheButton = () => {
   const createDateValue = modalCreationDate.value;
   const expDateValue = modalExpirationDate.value;
   const taskTextInfo = textArea.value;
+  const taskId = Date.now();
 
   if (taskTextInfo === '') return removeInfo();
 
   const newTaskModalObject = {
+    id: taskId,
+    isCompleted: false,
     numTask: `Task-${tasks.length + 1}`,
     toDoText: taskTextInfo,
     status: 'In Progress',
@@ -55,4 +54,4 @@ const savingDataUsingTheButton = () => {
 
 buttonNewTask.addEventListener('click', openModalWindow);
 buttonSave.addEventListener('click', savingDataUsingTheButton);
-buttonCancel.addEventListener('click', () => removeInfo());
+buttonCancel.addEventListener('click', removeInfo);

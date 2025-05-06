@@ -13,33 +13,35 @@ export function createRightContainerTable(status, priority) {
   rightButton.classList.add('importance');
   rightButton.textContent = priority;
 
-  const svgImportance = document.createElementNS(
-    'http://www.w3.org/2000/svg',
-    'svg'
-  );
+  const svgImportance = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
   svgImportance.classList.add('icon-sort');
 
-  const useSvgImoirtance = document.createElementNS(
-    'http://www.w3.org/2000/svg',
-    'use'
-  );
-  useSvgImoirtance.setAttribute(
-    'href',
-    './images-svg/symbol-defs.svg#icon-Arrow_Top'
-  );
+  const useSvgImoirtance = document.createElementNS('http://www.w3.org/2000/svg', 'use');
+  useSvgImoirtance.setAttribute('href', './images-svg/symbol-defs.svg#icon-Arrow_Top');
 
   const svgMore = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
   svgMore.classList.add('icon-sort');
 
-  const useSvgMore = document.createElementNS(
-    'http://www.w3.org/2000/svg',
-    'use'
-  );
+  const useSvgMore = document.createElementNS('http://www.w3.org/2000/svg', 'use');
   useSvgMore.setAttribute('href', './images-svg/symbol-defs.svg#icon-More');
+
+  const imgPencil = document.createElement('img');
+  imgPencil.setAttribute('src', './images-svg/pencil2.svg');
+  imgPencil.classList.add('icon-pencil');
+
+  const deleteBtn = document.createElement('button');
+  deleteBtn.classList.add('b-delete');
+  deleteBtn.textContent = '×';
+
+  const containerPencilAndButton = document.createElement('div');
+  containerPencilAndButton.classList.add('container-pencil-button');
 
   rightContainer.append(leftButton);
   rightContainer.append(rightButton);
   rightContainer.append(svgMore);
+  rightContainer.append(containerPencilAndButton);
+  containerPencilAndButton.append(imgPencil);
+  containerPencilAndButton.append(deleteBtn);
   svgMore.append(useSvgMore);
 
   leftButton.prepend(imgStatus);
