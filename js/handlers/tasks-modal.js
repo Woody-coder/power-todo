@@ -12,11 +12,21 @@ const buttonSave = document.querySelector('.b-save');
 const buttonCancel = document.querySelector('.b-cancel');
 const textArea = document.querySelector('.modal-textarea');
 
-const openModalWindow = () => {
+let editTaskId = null;
+
+export const openModalWindow = (targetTask) => {
   modal.classList.add('show');
   overlay.style.display = 'block';
-  const { dataCreation, dataExpiration } = getDatesCreationAndCustomExpiration();
-  [modalCreationDate.value, modalExpirationDate.value] = [dataCreation, dataExpiration];
+
+  if (targetTask) {
+    textArea.value = targetTask.toDoText;
+    modalCreationDate.value = targetTask.createDate;
+    modalExpirationDate.value = targetTask.expDate;
+    editTaskId = targetTask.id;
+  } else {
+    const { dataCreation, dataExpiration } = getDatesCreationAndCustomExpiration();
+    [modalCreationDate.value, modalExpirationDate.value] = [dataCreation, dataExpiration];
+  }
 };
 
 const removeInfo = () => {
@@ -29,29 +39,36 @@ const savingDataUsingTheButton = () => {
   const createDateValue = modalCreationDate.value;
   const expDateValue = modalExpirationDate.value;
   const taskTextInfo = textArea.value;
-  const taskId = Date.now();
 
   if (taskTextInfo === '') return removeInfo();
 
-  const newTaskModalObject = {
-    id: taskId,
-    isCompleted: false,
-    numTask: `Task-${tasks.length + 1}`,
-    toDoText: taskTextInfo,
-    status: 'In Progress',
-    priority: 'medium',
-    createDate: createDateValue,
-    expDate: expDateValue,
-  };
+  if (editTaskId) {
+    const targetTask = tasks.find((task) => task.id === editTaskId);
+    targetTask.toDoText = taskTextInfo;
+    targetTask.createDate = createDateValue;
+    targetTask.expDate = expDateValue;
+  } else {
+    const newTaskModalObject = {
+      id: Date.now(),
+      isCompleted: false,
+      numTask: `Task-${tasks.length + 1}`,
+      toDoText: taskTextInfo,
+      icon: './images-svg/Clock.svg',
+      status: 'In Progress',
+      priority: 'medium',
+      createDate: createDateValue,
+      expDate: expDateValue,
+    };
 
-  tasks.push(newTaskModalObject);
+    tasks.push(newTaskModalObject);
+  }
+
   setItemToLocalStorage('tasks', tasks);
-
-  const event = renderTasksToPage(newTaskModalObject);
+  const event = renderTasksToPage(tasks);
   document.dispatchEvent(event);
   removeInfo();
 };
 
-buttonNewTask.addEventListener('click', openModalWindow);
+buttonNewTask.addEventListener('click', () => openModalWindow(null));
 buttonSave.addEventListener('click', savingDataUsingTheButton);
 buttonCancel.addEventListener('click', removeInfo);

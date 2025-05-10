@@ -7,7 +7,7 @@ tasksTotalContainer.addEventListener('change', (e) => {
   if (e.target.classList.contains('task-checkbox')) {
     const toDoElement = e.target.closest('.task-1-for-styles');
     const taskId = +toDoElement.dataset.id;
-    const targetCheckbox = e.target;
+	  const targetCheckbox = e.target;
 
     toDoElement.classList.add('task-fade-out');
 
@@ -18,9 +18,11 @@ tasksTotalContainer.addEventListener('change', (e) => {
       changedTaskObj.isCompleted = targetCheckbox.checked;
 
       if (targetCheckbox.checked) {
+		  changedTaskObj.status = 'Done';
         tasks.push(changedTaskObj);
       } else {
-        tasks.unshift(changedTaskObj);
+		  tasks.unshift(changedTaskObj);
+		  changedTaskObj.status = 'In Progress';
       }
 
       setItemToLocalStorage('tasks', tasks);
@@ -28,6 +30,6 @@ tasksTotalContainer.addEventListener('change', (e) => {
       tasksTotalContainer.innerHTML = '';
       const event = renderTasksToPage(tasks);
       document.dispatchEvent(event);
-    }, 300); 
+    }, 300);
   }
 });

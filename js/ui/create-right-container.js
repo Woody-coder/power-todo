@@ -1,4 +1,4 @@
-export function createRightContainerTable(status, priority) {
+export function createRightContainerTable(status, priority, icon) {
   const rightContainer = document.createElement('div');
   rightContainer.classList.add('right-container-table');
 
@@ -7,7 +7,8 @@ export function createRightContainerTable(status, priority) {
   leftButton.textContent = status;
 
   const imgStatus = document.createElement('img');
-  imgStatus.setAttribute('src', './images-svg/Clock.svg');
+	imgStatus.setAttribute('src', icon);
+	imgStatus.classList.add('img-status');
 
   const rightButton = document.createElement('button');
   rightButton.classList.add('importance');

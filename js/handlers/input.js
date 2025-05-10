@@ -32,6 +32,7 @@ function createNewTaskForInput(inputText) {
     isCompleted: false,
     numTask: `Task-${tasks.length + 1}`,
     toDoText: trimText,
+    icon: './images-svg/Clock.svg',
     status: 'In Progress',
     priority: 'medium',
     createDate: dataCreation,

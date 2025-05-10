@@ -2,6 +2,7 @@ import './handlers/tasks-modal.js';
 import './ui/render-tasks.js';
 import './handlers/input.js';
 import './ui/task-marked.js';
+import './ui/editing-tasks.js';
 import { tasksTotalContainer } from './core/dom-elements.js';
 import { renderTasksToPage } from './core/custom-events.js';
 import { setItemToLocalStorage, getItemFromLocalStorage } from './core/helpers.js';
