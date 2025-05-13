@@ -6,6 +6,7 @@
 @import url('icons.css');
 @import url('header-table.css');
 @import url('modal.css');
+@import url('footer-buttons.css');
 
 :root {
   --font-family: 'Inter', sans-serif;
@@ -26,7 +27,7 @@ body {
   column-gap: 24px;
   border-radius: 15px;
   width: 1128px;
-  height: 652px;
+  height: 700px;
   box-shadow: 0 2px 6px 4px rgba(0, 0, 0, 0.04);
   background: #fff;
 }
