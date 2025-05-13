@@ -2,7 +2,7 @@
 	display: flex;
 	justify-content: space-between;
 	margin-top: 8px;
-	padding: 0 107px 5px 17px;
+	padding: 0 198px 5px 17px;
 	border-bottom: 1px solid #f2f2f2;
 }
 
@@ -13,7 +13,7 @@
 
 .right-container-table-header {
 	display: flex;
-	gap: 99px;
+	gap: 92px;
 }
 
 .b-sort {
